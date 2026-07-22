@@ -225,6 +225,7 @@ export function EventList() {
                         size="icon"
                         className="h-7 w-7 text-slate-400 group-hover:text-slate-500 hover:text-blue-500 hover:bg-blue-500/10"
                         title="Редактировать"
+                        aria-label="Редактировать"
                         onClick={(e) => { e.stopPropagation(); app?.openEdit(event.id); }}
                       >
                         <Pencil className="h-3.5 w-3.5" />
@@ -234,6 +235,7 @@ export function EventList() {
                         size="icon"
                         className="h-7 w-7 text-slate-400 group-hover:text-slate-500 hover:text-red-500 hover:bg-red-500/10"
                         title="Удалить"
+                        aria-label="Удалить"
                         onClick={(e) => { e.stopPropagation(); handleDelete(event.id); }}
                       >
                         <Trash2 className="h-3.5 w-3.5" />

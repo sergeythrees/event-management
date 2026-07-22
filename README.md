@@ -42,8 +42,8 @@ npm run preview
 
 ```
 src/
-├── components/ui/       # shadcn/ui компоненты (Card, Badge, Dialog, Button, Input, Select, Table, Label)
-├── features/            # Фича-компоненты
+├── components/ui/       # базовые shadcn/ui компоненты (Card, Badge, Dialog, Button, Input, Select, Table, Label)
+├── features/            # Компоненты с бизнес-логикой
 │   ├── EventCard/       # Карточка мероприятия
 │   ├── EventList/       # Сетка карточек + кнопка «Создать»
 │   ├── EventDetail/     # Модалка деталей мероприятия

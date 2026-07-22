@@ -325,7 +325,11 @@ export function EventFormDialog() {
 
             {showStudentSearch && (
               <div className="space-y-2 p-3 border rounded-md bg-muted/20">
+                <Label htmlFor="search-student" className="sr-only">
+                  Поиск обучающихся
+                </Label>
                 <Input
+                  id="search-student"
                   placeholder="Поиск по имени, коду или отделу..."
                   value={searchStudentQuery}
                   onChange={(e) => handleSearchStudent(e.target.value)}
@@ -376,6 +380,7 @@ export function EventFormDialog() {
                           type="button"
                           onClick={() => removeStudent(student.id)}
                           className="text-muted-foreground hover:text-destructive transition-colors"
+                          aria-label={`Удалить ${student.fullName} из обучающихся`}
                         >
                           <X className="h-4 w-4" />
                         </button>
@@ -408,7 +413,11 @@ export function EventFormDialog() {
 
             {showResponsibleSearch && (
               <div className="space-y-2 p-3 border rounded-md bg-muted/20">
+                <Label htmlFor="search-responsible" className="sr-only">
+                  Поиск ответственных
+                </Label>
                 <Input
+                  id="search-responsible"
                   placeholder="Поиск по имени, коду или отделу..."
                   value={searchResponsibleQuery}
                   onChange={(e) => handleSearchResponsible(e.target.value)}
@@ -459,6 +468,7 @@ export function EventFormDialog() {
                           type="button"
                           onClick={() => removeResponsible(person.id)}
                           className="text-muted-foreground hover:text-destructive transition-colors"
+                          aria-label={`Удалить ${person.fullName} из ответственных`}
                         >
                           <X className="h-4 w-4" />
                         </button>
